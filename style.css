@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'avenir';
   src: 
       local('avenir')
@@ -16,7 +16,7 @@
       url('/fonts/avenir-lt-std-45-book/avenir-lt-std-45-book/avenir_lt_std_45_book-webfont.woff') format('woff');
   font-weight: bold;
   font-style: normal;
-}
+} */
 
 :root {
   --clr-primary-200: hsl(42, 98%, 54%);
@@ -27,16 +27,20 @@
   --clr-neutral-400: #cccccc;
   --clr-neutral-700: hsl(0, 0%, 0%);
 
-  --ff-primary: 'avenir', sans-serif;
+  --ff-primary: 'Lato', sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
 
   --fw-regular: 400;
+  --fw-semibold: 500;
   --fw-bold: 700;
 
   --fs-300: .85rem;
   --fs-400: 1rem;
   --fs-500: 1.2rem;
   --fs-600: 1.5rem;
-  --fs-700: 4.8rem;
+  --fs-700: 1.8rem;
 }
 
 /* Box sizing rules */
@@ -45,35 +49,7 @@
 *::after {
   box-sizing: border-box;
 }
-/* variables */
-:root {
-  --clr-primary-400: #2591ce;
-  --clr-secondary-400: #f9cb47;
 
-  --clr-neutral-100: #ffffff;
-  --clr-neutral-200: #e1e7ef; 
-  --clr-neutral-300: #888888;
-  --clr-neutral-400:#737373; 
-  --clr-neutral-700: #040404;
-
-  --ff-primary: 'Roboto', sans-serif;
-
-  --ff-body: var(--ff-primary);
-  --ff-heading: var(--ff-primary);
-
-  --fw-regular: 400;
-  --fw-bold: 700;
-
-  --fs-300: .85rem;
-  --fs-400: 1rem;
-  --fs-500: 1.2rem;
-  --fs-600: 1.5rem;
-  --fs-700: 1.8rem;
-
-  --fs-body: var(--fs-400);
-  --fs-primary-heading: var(--fs-700);
-  --fs-nav: var(--fs-400);
-}
 
 /* Remove default margin */
 body,
@@ -121,7 +97,7 @@ a:not([class]) {
 img,
 picture
 {
- 
+  width: 100%;
   display: block;
 }
 
@@ -149,11 +125,42 @@ select {
   }
 }
 
-h1 {
-  font-family: var(--ff-primary);
-  font-size: var(--fs-400);
-}
+
 
 body {
   font-family: var(--ff-primary);
+}
+
+.main-container {
+  margin: auto;
+  height: 100vh;
+}
+
+/* Header styles */
+.header-container {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+
+  padding: 1rem;
+}
+
+.header-logo {
+  width: 30%;
+}
+
+.menu-logo{
+  display: flex;
+  align-items: center;
+  
+
+  color: var(--clr-primary-400);
+}
+
+
+/* Utility Classes*/
+.menu-color {
+  filter: invert(17%) sepia(32%) saturate(7156%) hue-rotate(326deg) brightness(79%) contrast(117%);
 }
