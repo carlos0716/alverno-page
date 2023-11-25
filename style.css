@@ -94,11 +94,14 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img,
-picture
-{
-  width: 100%;
-  display: block;
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -129,6 +132,8 @@ select {
 
 body {
   font-family: var(--ff-primary);
+  margin: auto;
+  width: 50%;
 }
 
 .main-container {
@@ -159,6 +164,120 @@ body {
   color: var(--clr-primary-400);
 }
 
+.title-header {
+  background-image: url('images/women-chatting.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Programs cards*/
+.programs::after {
+  content: '';
+  display: block;
+  background-image: url('/alverno-page/images/vert-dots.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.programs-title::after {
+  content: '';
+  display: block;
+  height: 65px;
+  width: 13px;
+  background-color: var(--clr-primary-200);
+}
+
+.programs-button a {
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+  display: inline-block;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--clr-primary-400);
+  line-height: 1;
+
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.programs-button a:hover {
+  border-color: var(--clr-primary-400);
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-400);
+}
+
+.programs-button a:focus {
+  outline: 4px auto -webkit-focus-ring-color; 
+}
+
+/*Block contents styles */
+.title-decorator-target::after {
+  content: '';
+  display: block;
+  height: 65px;
+  width: 13px;
+  background-color: var(--clr-primary-200);
+}
+
+.blockContents a {
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+  display: inline-block;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--clr-primary-400);
+  line-height: 1;
+
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.blockContents a:hover {
+  border-color: var(--clr-primary-400);
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-400);
+}
+
+.blockContents a:focus {
+  outline: 4px auto -webkit-focus-ring-color; 
+}
+
+.our-impact-number-wrap {
+  display: block;
+  text-align: center;
+  font-size: 56px;
+  filter: drop-shadow(3px 3px 0 var(--clr-neutral-100)) drop-shadow(6px 6px 0 var(--clr-primary-200));
+}
+
+.number {
+  color: var(--clr-primary-400);
+}
+
+.unit {
+  color: var(--clr-primary-400);
+}
+
+.our-image-description {
+  display: block;
+  font-size: var(--fs-300);
+  color: var(--clr-neutral-700);
+  text-align: center;
+}
 
 /* Utility Classes*/
 .menu-color {
