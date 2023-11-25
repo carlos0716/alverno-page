@@ -279,6 +279,71 @@ body {
   text-align: center;
 }
 
+/* Upcoming Events*/
+.upcoming-events-cards {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.events-card {
+  
+}
+
+.event-date {
+  position: absolute;
+  
+  left: 150px;
+  padding: 10px 15px;
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-400);
+  text-align: center;
+  background-color: var(--clr-primary-400);
+  z-index: 5;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.events-btn a {
+  width: 100%;
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+  display: inline-block;
+  line-height: 1;
+}
+
+.events-btn-wrap {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.events-bottom-btn  a{
+  color: var(--clr-primary-400);
+  border-color: var(--clr-primary-400);
+  background-color: transparent;
+  border-radius: 100px;
+  border-color: var(--clr-primary-400);
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.events-bottom-btn a span {
+  padding: 10px 35px;
+}
+
 /* Utility Classes*/
 .menu-color {
   filter: invert(17%) sepia(32%) saturate(7156%) hue-rotate(326deg) brightness(79%) contrast(117%);
